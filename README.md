@@ -1,1 +1,1 @@
-# criticas-app
+# Parcial de criticas - Versión Ruby on Rails

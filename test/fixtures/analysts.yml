@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  other_analyst: one
+  strategy: one
+  negative_strategy: one
+  name: MyString
+
+two:
+  other_analyst: two
+  strategy: two
+  negative_strategy: two
+  name: MyString
