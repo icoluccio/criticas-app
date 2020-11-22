@@ -8,7 +8,7 @@ class PancakeAnalyst < Analyst
   end
 
   def liked_country?(country)
-    liked_countries.include?(country)
+    countries.include?(country)
   end
 
   def title
