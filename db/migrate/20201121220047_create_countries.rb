@@ -6,6 +6,7 @@ class CreateCountries < ActiveRecord::Migration[6.0]
       t.bigint :pib
       t.float :university_percentage
       t.json :median_incomes
+      t.integer :world_id
 
       t.timestamps
     end

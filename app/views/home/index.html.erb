@@ -1,0 +1,14 @@
+<h1>Nación 12 - Artículos del día de hoy</h1>
+
+<table>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= link_to "Ver", article %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

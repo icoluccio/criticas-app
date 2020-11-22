@@ -4,6 +4,6 @@ FactoryBot.define do
     population { Faker::Number.number(digits: 8) }
     university_percentage { Faker::Number.decimal(l_digits: 2) }
     pib { Faker::Number.number(digits: 9) }
-    median_incomes { (1..5).map { Faker::Number.number(digits: 8).sort } }
+    median_incomes { ((1..5).map { Faker::Number.number(digits: 8) }).sort }
   end
 end

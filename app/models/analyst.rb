@@ -1,12 +1,12 @@
 class Analyst < ApplicationRecord
-  belongs_to :other_analyst, class_name: 'Analyst', required: false
-  belongs_to :strategy
   belongs_to :newspaper, required: false
-  belongs_to :negative_strategy, class_name: 'Strategy', required: false
 
   has_many :articles
+  has_many :favorite_countries
+  has_many :countries, through: :favorite_countries
+
   def write(country)
-    @articles << Articulo.create!(titulo, figure(country), self)
+    Article.create!(title: title, figure: figure(country), analyst: self)
   end
 
   def title

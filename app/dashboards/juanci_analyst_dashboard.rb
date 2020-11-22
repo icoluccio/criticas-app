@@ -1,4 +1,4 @@
 require 'administrate/base_dashboard'
 
-class JuanciAnalystDashboard < AnalystDashboard
+class JuanciAnalystDashboard < PancakeAnalystDashboard
 end

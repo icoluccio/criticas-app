@@ -3,7 +3,7 @@ class CreateArticles < ActiveRecord::Migration[6.0]
     create_table :articles do |t|
       t.text :title
       t.float :figure
-      t.int :analyst_id
+      t.integer :analyst_id
       
       t.timestamps
     end
