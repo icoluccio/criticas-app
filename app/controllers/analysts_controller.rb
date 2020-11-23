@@ -1,5 +1,13 @@
 class AnalystsController < ApplicationController
   def write
-    render json: Analyst.find(params[:id]).write(Country.find(params[:country_id]))
+    render json: analyst.write(country)
+  end
+
+  def analyst
+    Analyst.find(params[:id])
+  end
+
+  def country
+    Country.find(params[:country_id])
   end
 end

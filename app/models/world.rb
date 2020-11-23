@@ -1,6 +1,6 @@
 class World < ApplicationRecord
   has_many :countries
-  def el_mejor(strategy)
+  def best(strategy)
     countries.max { |country| strategy.calculate(country) }
   end
 end

@@ -16,4 +16,8 @@ class Analyst < ApplicationRecord
   def figure(_country)
     raise 'Definilo, capo'
   end
+
+  def can_write?(country)
+    (articles.size < 3) && !name.include?(country.name)
+  end
 end

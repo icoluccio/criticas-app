@@ -17,11 +17,24 @@ Rails.application.routes.draw do
 
     root to: 'analysts#index'
   end
+
   resources :analysts, only: [] do
     member do
       get :write
     end
   end
+
+  resources :worlds, only: [] do
+    member do
+      get :best
+    end
+  end
+  resources :newspapers, only: [] do
+    member do
+      get :create_edition
+    end
+  end
+
   resources :home, only: [] do
     collection do
       get :index
