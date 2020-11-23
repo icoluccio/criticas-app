@@ -1,4 +1,26 @@
-<h1>Nación 12 - <%= @article.title %> </h1>
+<h1>Nación 12 - Artículo</h1>
+<h3>
+        <a href="#" class="btn"><%= link_to "Volver a la home", home_index_path %></a></h3>
+ 
+<div class="container">
+    <div class="card" style="width: 35rem;">
+      <div class="card-body">
+        <h2 class="card-title"><%=@article.title%></h2>
 
-La cifra del artículo es:
-<%= @article.figure %>
+        <h3 class="card-title">La cifra del día: <%=@article.figure%> </h3>
+
+
+        <% Faker::Lorem.paragraphs(number: 4).each do |paragraph| %>
+            <p class="card-text"> <%=paragraph%> </p>
+        <% end %>
+
+        <img src="<%=Faker::LoremFlickr.image(size: "350x240", search_terms: ['economy'])%>">
+
+       <% Faker::Lorem.paragraphs(number: 2).each do |paragraph| %>
+            <p class="card-text"> <%=paragraph%> </p>
+        <% end %>
+
+        <p class="card-text">Escrito en <strong><%=@article.created_at%></strong> por <strong><%=@article.analyst.name%></strong></p>
+      </div>
+    </div>
+</div>

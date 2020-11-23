@@ -1,14 +1,15 @@
 <h1>Nación 12 - Artículos del día de hoy</h1>
 
-<table>
-
-  <tbody>
+<div class="container">
     <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= link_to "Ver", article %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+      <img class="card-img-top" src="<%=Faker::LoremFlickr.image(size: "350x240", search_terms: ['economy'])%>">
+        <h5 class="card-title"><%=article.title%></h5>
+        <p class="card-text">Autor: <%=article.analyst.name%></p>
+        <a href="<%= url_for article %>" class="btn btn-primary"> Seguir leyendo</a>
+      </div>
+    </div>
+    <% end %>
+</div>
